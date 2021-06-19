@@ -6,16 +6,18 @@
   <meta charset="utf-8">
   <title>模组简介-默认</title>
 </head>
-
+<script>
+  var input1
+</script>
 <body>
 
 
   <ul class="topmenu">
-    <li><a href="../home/dark.html">主页</a></li>
-    <li><a href="../news/dark.html">新闻</a></li>
-    <li><a href="../tool/dark.html">工具</a></li>
-    <li><a href="../mod/dark.html">模组</a></li>
-    <li><a href="../about/dark.html">关于我们</a></li>
+    <li><a href="../home/default.html">主页</a></li>
+    <li><a href="../news/default.html">新闻</a></li>
+    <li><a href="../tool/default.html">工具</a></li>
+    <li><a href="../mod/default.html">模组</a></li>
+    <li><a href="../about/default.html">关于我们</a></li>
   </ul>
 
   <div class="clearfix">
@@ -30,6 +32,7 @@
       <ul>
         <li><a href="#A">数据包</a></li>
         <li><a href="#B">资源包</a></li>
+        <li><a href="#C">测试</a></li>
       </ul>
     </div>
 
@@ -60,6 +63,22 @@
       <p class="center">
         建设中
       </p>
+
+      <div class="header">
+        <a id="C">测试</a>
+      </div>
+      <p><button onclick="inputItemFunction()" class="button">输入Cast</button></p>
+      <p id="jsonOutput"></p>
+      <script>
+        function inputItemFunction() {
+          var cast = prompt("请输入Cast.", "示例：minecraft:apple");
+          if (cast != null && cast != "") {
+            input1 = cast;
+            document.getElementById("jsonOutput").innerHTML = "当前Cast(请检查是否正确)：" + cast;
+          }
+        }
+      </script>
+
 
     </div>
 
